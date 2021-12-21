@@ -1,0 +1,15 @@
+version: "3.7"
+
+networks:
+  default:
+    external: true
+    name: aline
+
+services:
+  bank-service:
+    build: .
+    image: aline/transaction-microservice
+    env_file:
+      - .env
+    ports:
+      - 8073:${APP_PORT}
