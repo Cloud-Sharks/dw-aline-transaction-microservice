@@ -8,7 +8,7 @@ networks:
 services:
   bank-service:
     build: .
-    image: aline/transaction-microservice
+    image: captainsalt/transaction-microservice
     env_file:
       - .env
     ports:
